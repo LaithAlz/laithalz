@@ -1,19 +1,25 @@
-# Hi, I am Laith
+Hi 👋. I'm Laith Alzoubi
 
-CS student at the University of Toronto who ships AI and full stack products for learning and productivity. Dean’s Honour List. CS Specialist with a Math minor and a Business minor.
+I am a BSc Computer Science student at the University of Toronto Mississauga on the Dean’s Honour List. I love learning new things and building side projects. Check out my webpage for more → https://laithalzoubi.com
 
-## Projects
-* **RoadMapr** career roadmaps from a resume using LLMs → https://github.com/LaithAlz/RoadMapr
-* **Scriptorium** collaborative blogs with executable code and moderation → https://github.com/LaithAlz/Scriptorium
-* **Hermes** live transcription, summaries and multilingual speech support → https://github.com/LaithAlz/hermes
-* **EstiMap** housing price prediction with a mobile client → https://github.com/LaithAlz/EstiMap
-* **ML research** student performance prediction with KNN, IRT and NNs → https://github.com/LaithAlz/AiLabInc-Machine-Learning-Report
+Interests
+* AI and LLM applications for learning
+* Backend systems design
+* Computer vision and speech
 
-## Stack
-Python, TypeScript, React, Next.js, React Native, Node, Prisma, PostgreSQL, MongoDB, Docker, scikit learn, PyTorch, Cohere, Firebase, Google Cloud, Tailwind
+Skills
+* Full stack development (Python, TypeScript, JavaScript, Java)
+* Frontend (React, Next.js, Tailwind)
+* Backend and data (Node, Express, Prisma, PostgreSQL, MongoDB, Docker)
+* ML tooling (scikit learn, PyTorch, NumPy, Pandas, Cohere, Firebase, Google Cloud)
 
-## Links
-Portfolio → https://laithalzoubi.com  
-GitHub → https://github.com/LaithAlz  
-LinkedIn → https://www.linkedin.com/in/laith-alzoubi/  
-Email → allaith2004@gmail.com
+Projects
+* RoadMapr → https://github.com/LaithAlz/RoadMapr
+* Scriptorium → https://github.com/LaithAlz/Scriptorium
+* Hermes → https://github.com/LaithAlz/hermes
+* EstiMap → https://github.com/LaithAlz/EstiMap
+
+Links
+* GitHub → https://github.com/LaithAlz
+* LinkedIn → https://www.linkedin.com/in/laith-alzoubi/
+* Email → allaith2004@gmail.com
