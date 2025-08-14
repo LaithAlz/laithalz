@@ -20,6 +20,5 @@ Projects
 * EstiMap → https://github.com/LaithAlz/EstiMap
 
 Links
-* GitHub → https://github.com/LaithAlz
 * LinkedIn → https://www.linkedin.com/in/laith-alzoubi/
 * Email → allaith2004@gmail.com
