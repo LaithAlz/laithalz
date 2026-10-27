@@ -1,100 +1,93 @@
-# Hi 👋 I'm Laith
+# Laith Alzoubi
 
-I build **AI systems and backend infrastructure**, focused on LLM applications, retrieval pipelines, and agent architectures.
+Backend and distributed systems. Computer Science at the University of Toronto.
+Currently building test-automation agents at Dayforce.
 
-Most of my work is around making AI systems **reliable, structured, and production-ready**.
-
----
-
-## 🔧 What I work on
-
-* LLM systems (RAG, agents, evaluation)
-* Backend architecture and API design
-* Performance optimization and system reliability
+Everything below is public and clickable.
 
 ---
 
-## 🚀 Selected Projects
+## Projects
 
-### 🔹 Multi-Agent Research System
+### [jobsched](https://github.com/LaithAlz/jobsched) · Go
+A distributed job scheduler. Priority queue with FIFO tie-breaking feeding a goroutine
+worker pool, exponential-backoff retry on a sub-10s curve that Kubernetes' native `Job`
+backoff cannot express, and per-job CPU and memory limits verified at the cgroup v2 level
+by reading `memory.max` and `cpu.max` from inside the container.
 
-* Designed a 3-agent architecture (planner, executor, reviewer)
-* Implemented tool-augmented execution (web search + retrieval)
-* Built iterative refinement loops with feedback cycles
-* Used Anthropic SDK directly for full control over prompting and caching
+Benchmarking against a bare-Kubernetes control disproved my own hypothesis about the
+bottleneck: 12 to 21 seconds of pod startup, not my 38 µs/job of scheduling overhead.
 
-**Focus:** agent orchestration, control flow
+`Go` `Kubernetes` `client-go` `cgroup v2` `Docker` `Prometheus`
 
----
+### [Stoop](https://github.com/LaithAlz/stoop-backend) · Python, TypeScript
+Tenant maintenance texts triaged by severity, with landlord-voiced replies drafted for
+one-tap approval. A deterministic rule-based safety filter wraps the LLM so model output
+is never trusted unvalidated, held to a zero-missed-emergency bar by a 20-scenario
+evaluation harness used as a release gate. Exactly-once escalation across process crashes
+via PostgreSQL advisory locks and compare-and-swap row claims.
 
-### 🔹 RAG Pipeline
+Architecture, schema, evals and roadmap are complete and in the repo. The backend is
+being built issue by issue; the marketing site and waitlist are live.
 
-* Built end-to-end system with PDF ingestion and semantic search (pgvector)
-* Improved retrieval quality using cross-encoder reranking
-* Generated grounded responses to eliminate hallucinations
-* Developed evaluation harness (faithfulness, relevance, precision)
+`FastAPI` `LangGraph` `Anthropic SDK` `PostgreSQL` `Cloudflare Workers` `Fly.io`
 
-**Focus:** retrieval quality, evaluation, reliability
+### [OnSide](https://getonside.ca) · TypeScript
+A soccer field finding app for the GTA, shipped solo to the iOS App Store, now with 50+
+signed-up users. Fastify backend with PostGIS radius search, Redis caching and row-level
+security, React Native client, OAuth 2.0 with Google and Apple. CI gates every pull
+request on typecheck, lint, test and migration validation.
 
----
+Source: [LaithAlz/onside](https://github.com/LaithAlz/onside)
 
-### 🔹 Me-Agent
+`Fastify` `PostgreSQL` `PostGIS` `Redis` `React Native` `GitHub Actions`
 
-* Built AI agent with WebAuthn-based identity constraints
-* Designed architecture separating memory, reasoning, and authority layers
+### [HomeKept](https://github.com/LaithAlz/HomeKept) · Java
+Subscription home maintenance for the GTA. Spring Boot API on Java 17 with Postgres and
+Flyway, TanStack Start frontend on Cloudflare Workers, Testcontainers-backed integration
+tests.
 
-**Focus:** agent safety, system boundaries
+Includes a deliberate simplification refactor that deleted about 7,500 net lines with no
+behaviour change, every pull request reviewed and CI green, and a self-initiated
+adversarial security review against my own code that found and fixed JWT/RBAC and
+input-validation defects.
 
----
+`Spring Boot` `Java 17` `PostgreSQL` `Flyway` `Testcontainers` `TanStack Start`
 
-### 🔹 Scriptorium
+### [Walk the Past](https://walk-the-past.vercel.app) · TypeScript
+One historical photograph turned into a walkable 3D world rendered in the browser. World
+generation runs as persistent async jobs on Cloudflare Workers and Durable Objects, so
+you can close the tab and come back to a finished result. In-world voice agent via the
+OpenAI Realtime API with tool calling into app features. Built at Hack the North 2026.
 
-* Built full-stack platform with role-based access control and moderation workflows
-* Developed sandboxed code execution supporting 10+ languages
-* Modeled structured data with Prisma + PostgreSQL
+Source: [LaithAlz/WalkThePast](https://github.com/LaithAlz/WalkThePast)
 
-**Focus:** backend systems, platform design
+`Three.js` `Cloudflare Workers` `Durable Objects` `OpenAI Realtime`
 
----
+### [Scriptorium](https://github.com/LaithAlz/Scriptorium) · TypeScript
+Collaborative coding and blogging platform. Sandboxed code execution across 10+
+languages, JWT auth, role-based access control and moderation workflows, data modelled
+with Prisma and PostgreSQL.
 
-## 🛠 Stack
-
-**Languages**
-Python, TypeScript, JavaScript, Java
-
-**AI / ML**
-LLMs, RAG, LangGraph, embeddings, reranking
-PyTorch, scikit-learn
-
-**Backend**
-FastAPI, Node.js, PostgreSQL, MongoDB
-REST APIs, authentication
-
-**Tools**
-Docker, Git, AWS, Google Cloud, Kibana
-
----
-
-## 📈 Currently exploring
-
-* Retrieval evaluation and benchmarking
-* Multi-agent coordination patterns
-* Real-time and streaming systems
+`Next.js` `Prisma` `PostgreSQL` `TailwindCSS`
 
 ---
 
-## 📫 Contact
+## Stack
 
-* 🌐 https://laithalzoubi.com
-* 🔗 https://www.linkedin.com/in/laith-alzoubi/
-* 📧 [allaith2004@gmail.com](mailto:allaith2004@gmail.com)
+**Languages** Go, Java, TypeScript, Python, SQL, C
 
----
+**Backend** Spring Boot, FastAPI, Fastify, REST APIs, PostgreSQL, PostGIS, Redis
 
-## 📊 GitHub Stats
+**Infrastructure** Kubernetes, Docker, Unix/Linux, Prometheus, AWS, Cloudflare Workers,
+GitHub Actions, CI/CD
 
-![Laith's GitHub stats](https://github-readme-stats.vercel.app/api?username=LaithAlz\&show_icons=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=LaithAlz\&layout=compact)
+**Practices** Benchmarking, profiling, eval harnesses, determinism, code review
 
 ---
+
+## Contact
+
+[laithalzoubi.com](https://laithalzoubi.com) ·
+[LinkedIn](https://www.linkedin.com/in/laith-alzoubi/) ·
+allaith2004@gmail.com
