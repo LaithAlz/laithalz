@@ -54,6 +54,18 @@ input-validation defects.
 
 `Spring Boot` `Java 17` `PostgreSQL` `Flyway` `Testcontainers` `TanStack Start`
 
+### [Market Feed](https://github.com/LaithAlz/Market-Data-Aggregator) · Python
+Real-time stock price aggregator. Alpaca IEX WebSocket ingest normalised into a
+validated `Tick` model, buffered 500ms then bulk-inserted into TimescaleDB, latest
+price written through to Redis, OHLCV history served from FastAPI, and a Rich
+terminal dashboard on top.
+
+The aggregation leans on what TimescaleDB adds over plain Postgres: hypertable
+partitioning so a time-bounded query scans one chunk, and `time_bucket()` with
+`first()`/`last()` to build candles in SQL instead of pulling raw rows into Python.
+
+`FastAPI` `TimescaleDB` `Redis` `WebSockets` `Pydantic` `Docker`
+
 ### [Walk the Past](https://walk-the-past.vercel.app) · TypeScript
 One historical photograph turned into a walkable 3D world rendered in the browser. World
 generation runs as persistent async jobs on Cloudflare Workers and Durable Objects, so
