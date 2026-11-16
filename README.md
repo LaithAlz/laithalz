@@ -9,6 +9,31 @@ Everything below is public and clickable.
 
 ## Projects
 
+### [OnSide](https://getonside.ca) · TypeScript
+A soccer field finding app for the GTA, shipped solo to the iOS App Store, now with 50+
+signed-up users. Fastify backend with PostGIS radius search, Redis caching and row-level
+security, React Native client, OAuth 2.0 with Google and Apple. CI gates every pull
+request on typecheck, lint, test and migration validation.
+
+Source: [LaithAlz/onside](https://github.com/LaithAlz/onside)
+
+`Fastify` `PostgreSQL` `PostGIS` `Redis` `React Native` `GitHub Actions`
+
+### [HomeKept](https://homekept.ca) · Java
+Subscription home maintenance for the GTA, live at homekept.ca. Two founders; I write all
+the software. Spring Boot API on Java 17 with Postgres and
+Flyway, TanStack Start frontend on Cloudflare Workers, Testcontainers-backed integration
+tests.
+
+Includes a deliberate simplification refactor that deleted about 7,500 net lines with no
+behaviour change, every pull request reviewed and CI green, and a self-initiated
+adversarial security review against my own code that found and fixed JWT/RBAC and
+input-validation defects.
+
+Source: [LaithAlz/HomeKept](https://github.com/LaithAlz/HomeKept)
+
+`Spring Boot` `Java 17` `PostgreSQL` `Flyway` `Testcontainers` `TanStack Start`
+
 ### [jobsched](https://github.com/LaithAlz/jobsched) · Go
 A distributed job scheduler. Priority queue with FIFO tie-breaking feeding a goroutine
 worker pool, exponential-backoff retry on a sub-10s curve that Kubernetes' native `Job`
@@ -27,32 +52,10 @@ is never trusted unvalidated, held to a zero-missed-emergency bar by a 20-scenar
 evaluation harness used as a release gate. Exactly-once escalation across process crashes
 via PostgreSQL advisory locks and compare-and-swap row claims.
 
-Architecture, schema, evals and roadmap are complete and in the repo. The backend is
-being built issue by issue; the marketing site and waitlist are live.
+The backend, web dashboard and mobile app are in the repo with tests and evals. It is a
+personal project and is not deployed with real tenants.
 
 `FastAPI` `LangGraph` `Anthropic SDK` `PostgreSQL` `Cloudflare Workers` `Fly.io`
-
-### [OnSide](https://getonside.ca) · TypeScript
-A soccer field finding app for the GTA, shipped solo to the iOS App Store, now with 50+
-signed-up users. Fastify backend with PostGIS radius search, Redis caching and row-level
-security, React Native client, OAuth 2.0 with Google and Apple. CI gates every pull
-request on typecheck, lint, test and migration validation.
-
-Source: [LaithAlz/onside](https://github.com/LaithAlz/onside)
-
-`Fastify` `PostgreSQL` `PostGIS` `Redis` `React Native` `GitHub Actions`
-
-### [HomeKept](https://github.com/LaithAlz/HomeKept) · Java
-Subscription home maintenance for the GTA. Spring Boot API on Java 17 with Postgres and
-Flyway, TanStack Start frontend on Cloudflare Workers, Testcontainers-backed integration
-tests.
-
-Includes a deliberate simplification refactor that deleted about 7,500 net lines with no
-behaviour change, every pull request reviewed and CI green, and a self-initiated
-adversarial security review against my own code that found and fixed JWT/RBAC and
-input-validation defects.
-
-`Spring Boot` `Java 17` `PostgreSQL` `Flyway` `Testcontainers` `TanStack Start`
 
 ### [Market Feed](https://github.com/LaithAlz/Market-Data-Aggregator) · Python
 Real-time stock price aggregator. Alpaca IEX WebSocket ingest normalised into a
