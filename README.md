@@ -25,10 +25,8 @@ the software. Spring Boot API on Java 17 with Postgres and
 Flyway, TanStack Start frontend on Cloudflare Workers, Testcontainers-backed integration
 tests.
 
-Includes a deliberate simplification refactor that deleted about 7,500 net lines with no
-behaviour change, every pull request reviewed and CI green, and a self-initiated
-adversarial security review against my own code that found and fixed JWT/RBAC and
-input-validation defects.
+Includes a self-initiated adversarial security review against my own code that found and
+fixed JWT/RBAC and input-validation defects.
 
 Source: [LaithAlz/HomeKept](https://github.com/LaithAlz/HomeKept)
 
